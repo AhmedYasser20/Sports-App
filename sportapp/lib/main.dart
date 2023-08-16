@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sportapp/screens/onboardingScreens/onboard_one.dart';
 import 'package:sportapp/screens/splash_screen.dart';
 
 void main() {
@@ -14,7 +15,8 @@ class Myapp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       initialRoute: "/",
       routes: {
-        "/" :(context) => SplashScreen()
+        "/" :(context) => SplashScreen(),
+        "OnBoardOne":(context) => OnBoardOne(),
       },
     );
   }
