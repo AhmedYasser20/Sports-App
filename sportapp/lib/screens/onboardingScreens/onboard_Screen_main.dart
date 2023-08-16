@@ -12,6 +12,9 @@ class OnBoardScreenMain extends StatelessWidget {
           child: Container(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [TextButton(onPressed: (){}, child: Text("Skip"))]),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -23,7 +26,7 @@ class OnBoardScreenMain extends StatelessWidget {
                   ],
                 ),
               ),
-              TextButton(onPressed: (){}, child: Text("Skip"))
+             
             ]),
             decoration: BoxDecoration(
                 image: DecorationImage(

@@ -42,34 +42,31 @@ class _testOnBoardScreenMainState extends State<testOnBoardScreenMain> {
   Widget build(BuildContext context) {
     return Scaffold(
         backgroundColor: const Color.fromARGB(255, 3, 5, 17),
-        body: Container(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                width: MediaQuery.of(context).size.width,
-                height: MediaQuery.of(context).size.height*0.7,
-                child: PageView(
-                   controller: _pageController,
-                  onPageChanged: (index) {
-                    setState(() {
-                      _currentPage = index;
-                    });
-                  },
-                  scrollDirection: Axis.horizontal,
-                  children: [OnboardOnne(), OnBoardTwo(), OnBoardThree()],
-                ),
+        body: Column(
+          children: [
+            SizedBox(height: 25,),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                TextButton(onPressed: (){}, child: Text("Skip",style: TextStyle(color: Colors.white),)),
+              ],
+            ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: MediaQuery.of(context).size.height*0.9,
+              child: PageView(
+                 controller: _pageController,
+                onPageChanged: (index) {
+                  setState(() {
+                    _currentPage = index;
+                  });
+                },
+                scrollDirection: Axis.horizontal,
+                children: [OnboardOnne(), OnBoardTwo(), OnBoardThree()],
               ),
-              TextButton(onPressed: (){}, child: Text("Skip",style: TextStyle(color: Colors.white),))
-            ],
-          ),
-          decoration: BoxDecoration(
-              image: DecorationImage(
-                  opacity: 0.1,
-                  fit: BoxFit.none,
-                  //maybe need locol image
-                  image: NetworkImage(
-                      "https://images.unsplash.com/photo-1552318965-6e6be7484ada?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=387&q=80"))),
+            ),
+            
+          ],
         ));
   }
 }

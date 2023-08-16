@@ -6,61 +6,86 @@ class OnboardOnne extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return    SizedBox(
-                       width: MediaQuery.of(context).size.width ,
-                       //height: MediaQuery.of(context).size.height*0.7,
-                      child: Column(
-                        children: [
-                          Container(
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(40),
-                                color: const Color.fromARGB(255, 238, 103, 148),
-                                image: DecorationImage(
-                                    image:
-                                        AssetImage('assets/imgs/messi.png'))),
-                          width: MediaQuery.of(context).size.width * 0.7,
-                          height: MediaQuery.of(context).size.height*0.25,
-                          ),
-                          Text("Welcome to The Sports App!",style: GoogleFonts.bebasNeue(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
-                         Text("All Your Favorite Sports in One Place",style: GoogleFonts.quicksand(color: Colors.white),)
-                        ],
-                      ),
-                    );
+    return    Container(
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(color: const Color.fromARGB(255, 238, 103, 148),),
+      child: Column(
+        children: [
+          Container(
+            decoration: BoxDecoration(          
+                image: DecorationImage(
+                    image:
+                        AssetImage('assets/imgs/messi.png'))),
+          width: MediaQuery.of(context).size.width ,
+          height: MediaQuery.of(context).size.height*0.60*0.9,
+          ),
+          Container(
+             width: MediaQuery.of(context).size.width ,
+            height: MediaQuery.of(context).size.height*0.40*0.9,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(40)),
+              color: Colors.black
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 20,),
+                      Text("Football",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      SizedBox(height: 10,),
+                      Text("a team sport where players kick a ball into the opposing team's goal to score points, with the aim of having the highest number of goals by the end of the match to win.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                    ],
+              ),
+            ),
+          )
+        ],
+      ),
+    );
   }
 }
+
+
 class OnBoardTwo extends StatelessWidget {
   const OnBoardTwo({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width ,
-      height: MediaQuery.of(context).size.height*0.7,
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(color: Color.fromARGB(255, 253, 189, 93),),
       child: Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                              color: Color.fromARGB(255, 238, 234, 235),
-                              image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/imgs/vin.png'))),
-                          // width: MediaQuery.of(context).size.width * 0.7,
-                         width: MediaQuery.of(context).size.width * 0.7,
-                          height: MediaQuery.of(context).size.height*0.25,
-                        ),
-                       Column(
-                         children: [
-                           Text("Stay Updated with Live Scores and More",style: GoogleFonts.bebasNeue(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
-                           Text("1:Real-time live scores for football, basketball, cricket, tennis, and more.",style: GoogleFonts.quicksand(color: Colors.white),),
-                           Text("2:Comprehensive sports data and statistics for every match.",style: GoogleFonts.quicksand(color: Colors.white),),
-                           Text("3:Get personalized notifications for your favorite teams and leagues.",style: GoogleFonts.quicksand(color: Colors.white),),
-                           Text("4:Stay informed with the latest sports news and updates.",style: GoogleFonts.quicksand(color: Colors.white),),
-                           Text("5:Interactive widgets to customize your home screen with live scores and fixtures.",style: GoogleFonts.quicksand(color: Colors.white),),
-                         ],
-                       )
-                      ],
-                    ),
+        children: [
+          Container(
+            decoration: BoxDecoration(          
+                image: DecorationImage(
+                    image:
+                        AssetImage('assets/imgs/basketPLayer2.png'))),
+          width: MediaQuery.of(context).size.width ,
+          height: MediaQuery.of(context).size.height*0.60*0.9,
+          ),
+          Container(
+             width: MediaQuery.of(context).size.width ,
+            height: MediaQuery.of(context).size.height*0.40*0.9,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(40)),
+              color: Colors.black
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 20,),
+                      Text("Basketball",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      SizedBox(height: 10,),
+                      Text("fast-paced team sport played with a spherical ball, where players try to score points by shooting the ball into the opponent's hoop while defending their own.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                    ],
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
@@ -70,33 +95,41 @@ class OnBoardThree extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: MediaQuery.of(context).size.width ,
-      height: MediaQuery.of(context).size.height*0.7,
+    return Container(
+      width: MediaQuery.of(context).size.width,
+      decoration: BoxDecoration(color: Color.fromARGB(255, 60, 176, 239),),
       child: Column(
-                      children: [
-                        Container(
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(40),
-                              color: Color.fromARGB(255, 114, 115, 207),
-                              image: DecorationImage(
-                                  image:
-                                      AssetImage('assets/imgs/unknownplayer.png'))),
-                          // width: MediaQuery.of(context).size.width * 0.7,
-                         width: MediaQuery.of(context).size.width * 0.7,
-                          height: MediaQuery.of(context).size.height*0.25,
-                        ),
-                       Column(
-                         children: [
-                           Text("Enhance Your Sports-Watching Experience",style: GoogleFonts.bebasNeue(color: Colors.white,fontSize: 25,fontWeight: FontWeight.bold),),
-                           Text("1: Never miss a moment with live match commentary and highlights",style: GoogleFonts.quicksand(color: Colors.white),),
-                           Text("2: Engage with fellow sports fans through social sharing and discussion.",style: GoogleFonts.quicksand(color: Colors.white),),
-                           Text("3: Get expert analysis and insights from renowned sports commentators.",style: GoogleFonts.quicksand(color: Colors.white),),
-                           Text("4: Customize your app experience with favorite team selections and personalized settings.",style: GoogleFonts.quicksand(color: Colors.white),),
-                         ],
-                       )
-                      ],
-                    ),
+        children: [
+          Container(
+            decoration: BoxDecoration(          
+                image: DecorationImage(
+                    image:
+                        AssetImage('assets/imgs/tennisPLayer2.png'))),
+          width: MediaQuery.of(context).size.width ,
+          height: MediaQuery.of(context).size.height*0.60*0.9,
+          ),
+          Container(
+             width: MediaQuery.of(context).size.width ,
+            height: MediaQuery.of(context).size.height*0.40*0.9,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.only(topLeft: Radius.circular(40)),
+              color: Colors.black
+            ),
+            child: Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 20,),
+                      Text("Tennis",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      SizedBox(height: 10,),
+                      Text("racket sport played between two players or teams, involving hitting a ball over a net using rackets, with the objective of winning points by making the ball land in the opponent's court in a way they cannot return it successfully.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                    ],
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
