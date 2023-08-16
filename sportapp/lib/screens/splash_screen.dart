@@ -7,7 +7,7 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
    Future.delayed(Duration(seconds: 5)
    ,(){
-    Navigator.pushReplacementNamed(context, "OnBoardOne");
+    Navigator.pushReplacementNamed(context, "OnBoardScreen");
    }
    );
 

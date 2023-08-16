@@ -1,28 +1,23 @@
 import 'package:flutter/material.dart';
 import 'package:sportapp/widgets/onboarding_widgets.dart';
 
-class OnBoardOne extends StatelessWidget {
-  const OnBoardOne({super.key});
+class OnBoardScreenThree extends StatelessWidget {
+  const OnBoardScreenThree({super.key});
 
   @override
   Widget build(BuildContext context) {
+    Future.delayed(Duration(seconds: 3)
+   ,(){
+    Navigator.pushReplacementNamed(context, "OnBoardScreenMain");
+   }
+   );
     return Scaffold(
         backgroundColor: const Color.fromARGB(255, 3, 5, 17),
         body: SizedBox.expand(
           child: Container(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    OnboardOnne(),
-                    OnBoardTwo(),
-                    OnBoardThree()
-                  ],
-                ),
-              ),
+              OnBoardThree(),
               TextButton(onPressed: (){}, child: Text("Skip"))
             ]),
             decoration: BoxDecoration(
