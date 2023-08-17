@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sportapp/widgets/onboarding_widgets.dart';
 
-import '../Category_Screen.dart';
-
 class testOnBoardScreenMain extends StatefulWidget {
   const testOnBoardScreenMain({super.key});
 
@@ -43,38 +41,14 @@ class _testOnBoardScreenMainState extends State<testOnBoardScreenMain> {
   }
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 3, 5, 17),
         body: Column(
           children: [
             SizedBox(height: 25,),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                ElevatedButton(
-                                onPressed: () {
-                                
-                                    Navigator.pushReplacementNamed(
-                                      context,
-                                      "categoryscreen"
-                                      // Form is valid, do something
-                                    );
-                                  },
-                                
-                                style: ElevatedButton.styleFrom(
-                                  primary: Colors.amber,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(50),
-                                  ),
-                                  minimumSize: Size(100, 25),
-                                ),
-                                child: Text(
-                                  "Skip",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
+                TextButton(onPressed: (){}, child: Text("Skip",style: TextStyle(color: Colors.white),)),
               ],
             ),
             Container(
