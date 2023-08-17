@@ -12,10 +12,10 @@ class OnboardOnne extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            decoration: BoxDecoration(          
+            decoration: BoxDecoration(
                 image: DecorationImage(
                     image:
-                        AssetImage('assets/imgs/messi.png'))),
+                        AssetImage('assets/images/messi.png'))),
           width: MediaQuery.of(context).size.width ,
           height: MediaQuery.of(context).size.height*0.60*0.9,
           ),
@@ -32,9 +32,9 @@ class OnboardOnne extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 20,),
-                      Text("Football",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      Text("Football",style: GoogleFonts.barriecito(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
                       SizedBox(height: 10,),
-                      Text("a team sport where players kick a ball into the opposing team's goal to score points, with the aim of having the highest number of goals by the end of the match to win.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                      Text("a team sport where players kick a ball into the opposing team's goal to score points, with the aim of having the highest number of goals by the end of the match to win.",style:  GoogleFonts.barriecito(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
                     ],
               ),
             ),
@@ -57,15 +57,15 @@ class OnBoardTwo extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            decoration: BoxDecoration(          
+            decoration: BoxDecoration(
                 image: DecorationImage(
                     image:
-                        AssetImage('assets/imgs/basketPLayer2.png'))),
+                        AssetImage('assets/images/basketPlayer2.png'))),
           width: MediaQuery.of(context).size.width ,
           height: MediaQuery.of(context).size.height*0.60*0.9,
           ),
           Container(
-             width: MediaQuery.of(context).size.width ,
+            width: MediaQuery.of(context).size.width ,
             height: MediaQuery.of(context).size.height*0.40*0.9,
             decoration: BoxDecoration(
               borderRadius: BorderRadius.only(topLeft: Radius.circular(40)),
@@ -77,9 +77,9 @@ class OnBoardTwo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 20,),
-                      Text("Basketball",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      Text("Basketball",style:  GoogleFonts.barriecito(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
                       SizedBox(height: 10,),
-                      Text("fast-paced team sport played with a spherical ball, where players try to score points by shooting the ball into the opponent's hoop while defending their own.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                      Text("fast-paced team sport played with a spherical ball, where players try to score points by shooting the ball into the opponent's hoop while defending their own.",style:  GoogleFonts.barriecito(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
                     ],
               ),
             ),
@@ -104,7 +104,7 @@ class OnBoardThree extends StatelessWidget {
             decoration: BoxDecoration(          
                 image: DecorationImage(
                     image:
-                        AssetImage('assets/imgs/tennisPLayer2.png'))),
+                        AssetImage('assets/images/tennisPlayer2.png'))),
           width: MediaQuery.of(context).size.width ,
           height: MediaQuery.of(context).size.height*0.60*0.9,
           ),
@@ -121,9 +121,9 @@ class OnBoardThree extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 20,),
-                      Text("Tennis",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      Text("Tennis",style:  GoogleFonts.barriecito(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
                       SizedBox(height: 10,),
-                      Text("racket sport played between two players or teams, involving hitting a ball over a net using rackets, with the objective of winning points by making the ball land in the opponent's court in a way they cannot return it successfully.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                      Text("racket sport played between two players or teams, involving hitting a ball over a net using rackets, with the objective of winning points by making the ball land in the opponent's court in a way they cannot return it successfully.",style:  GoogleFonts.barriecito(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
                     ],
               ),
             ),
