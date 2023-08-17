@@ -19,10 +19,9 @@ class SplashScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              
                 Text("Sport App",style:  GoogleFonts.bebasNeue(color: Colors.white,fontSize: 40,fontWeight: FontWeight.bold),),
                 Text("Intixel training app",style: GoogleFonts.quicksand(color: Colors.white),)
-],
+              ],
             ),
             decoration: BoxDecoration(
             image: DecorationImage(

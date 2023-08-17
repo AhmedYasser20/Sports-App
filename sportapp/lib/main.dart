@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sportapp/screens/HomeScreen/home_screen.dart';
 import 'package:sportapp/screens/onboardingScreens/test_page_view.dart';
 import 'package:sportapp/screens/splash_screen.dart';
 
@@ -17,6 +18,7 @@ class Myapp extends StatelessWidget {
       routes: {
         "/" :(context) => SplashScreen(),
         "OnBoardScreen":(context) => testOnBoardScreenMain(),
+        "HomeScreen" :(context) => HomeScreen(),
       },
     );
   }

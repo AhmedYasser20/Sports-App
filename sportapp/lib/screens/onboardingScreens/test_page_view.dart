@@ -48,7 +48,9 @@ class _testOnBoardScreenMainState extends State<testOnBoardScreenMain> {
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                TextButton(onPressed: (){}, child: Text("Skip",style: TextStyle(color: Colors.white),)),
+                TextButton(onPressed: (){
+                   Navigator.pushNamed(context, "HomeScreen");
+                }, child: Text("Skip",style: TextStyle(color: Colors.white),)),
               ],
             ),
             Container(

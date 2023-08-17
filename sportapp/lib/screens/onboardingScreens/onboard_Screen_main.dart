@@ -14,7 +14,14 @@ class OnBoardScreenMain extends StatelessWidget {
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: [TextButton(onPressed: (){}, child: Text("Skip"))]),
+                    children: [
+                      InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, "HomeScreen");
+                        },
+                        child: Text("Ski2p"),
+                      )
+                    ]),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -26,7 +33,6 @@ class OnBoardScreenMain extends StatelessWidget {
                   ],
                 ),
               ),
-             
             ]),
             decoration: BoxDecoration(
                 image: DecorationImage(
