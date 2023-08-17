@@ -1,4 +1,6 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:sportapp/screens/Category_Screen.dart';
 import 'package:sportapp/widgets/onboarding_widgets.dart';
 
 class OnBoardScreenMain extends StatelessWidget {
@@ -7,14 +9,43 @@ class OnBoardScreenMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 3, 5, 17),
+        backgroundColor: Colors.black,
         body: SizedBox.expand(
           child: Container(
             child:
                 Column(mainAxisAlignment: MainAxisAlignment.center, children: [
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
-                    children: [TextButton(onPressed: (){}, child: Text("Skip"))]),
+                    children: [
+                   ElevatedButton(
+                                onPressed: () {
+                                
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              CategoryScreen()),
+                                      // Form is valid, do something
+                                    );
+                                  },
+                                
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.amber,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  minimumSize: Size(100, 25),
+                                ),
+                                child: Text(
+                                  "Skip",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            
+        ]),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
