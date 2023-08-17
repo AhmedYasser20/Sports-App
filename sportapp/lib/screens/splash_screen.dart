@@ -5,11 +5,11 @@ class SplashScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-Future.delayed(Duration(seconds: 5)
-  ,(){
+   Future.delayed(Duration(seconds: 5)
+   ,(){
     Navigator.pushReplacementNamed(context, "OnBoardScreen");
-  }
-  );
+   }
+   );
 
 
     return Scaffold(
@@ -19,17 +19,16 @@ Future.delayed(Duration(seconds: 5)
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-              
-                Text("Sport App",style:  GoogleFonts.barriecito(color: Colors.amber,fontSize: 40,fontWeight: FontWeight.bold),),
+                Text("Sport App",style:  GoogleFonts.bebasNeue(color: Colors.white,fontSize: 40,fontWeight: FontWeight.bold),),
                 Text("Intixel training app",style: GoogleFonts.quicksand(color: Colors.white),)
-],
+              ],
             ),
             decoration: BoxDecoration(
             image: DecorationImage(
               opacity: 0.5,
               fit: BoxFit.none,
               //maybe need locol image
-                image: AssetImage("assets/images/wallpaper.jpg"))),
+                image: AssetImage("assets/imgs/wallpaper.jpg"))),
             ),
         )
     );

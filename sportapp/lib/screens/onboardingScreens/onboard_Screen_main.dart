@@ -1,6 +1,4 @@
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sportapp/screens/Category_Screen.dart';
 import 'package:sportapp/widgets/onboarding_widgets.dart';
 
 class OnBoardScreenMain extends StatelessWidget {
@@ -9,7 +7,7 @@ class OnBoardScreenMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: const Color.fromARGB(255, 3, 5, 17),
         body: SizedBox.expand(
           child: Container(
             child:
@@ -17,35 +15,13 @@ class OnBoardScreenMain extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                   ElevatedButton(
-                                onPressed: () {
-                                
-                                    Navigator.pushReplacement(
-                                      context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              CategoryScreen()),
-                                      // Form is valid, do something
-                                    );
-                                  },
-                                
-                                style: ElevatedButton.styleFrom(
-                                  primary: Colors.amber,
-                                  shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(50),
-                                  ),
-                                  minimumSize: Size(100, 25),
-                                ),
-                                child: Text(
-                                  "Skip",
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              ),
-                            
-        ]),
+                      InkWell(
+                        onTap: (){
+                          Navigator.pushReplacementNamed(context, "HomeScreen");
+                        },
+                        child: Text("Ski2p"),
+                      )
+                    ]),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -57,7 +33,6 @@ class OnBoardScreenMain extends StatelessWidget {
                   ],
                 ),
               ),
-             
             ]),
             decoration: BoxDecoration(
                 image: DecorationImage(
