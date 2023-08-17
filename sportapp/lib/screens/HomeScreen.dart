@@ -12,7 +12,6 @@ class _HomeScreenState extends State<HomeScreen> {
   int _selectedIndex = 0;
   List<Widget> _widgetOptions = <Widget>[
   CategoryScreen(),
-  
   ];
 
   void _onItemTapped(int index) {

@@ -53,11 +53,9 @@ class _testOnBoardScreenMainState extends State<testOnBoardScreenMain> {
                 ElevatedButton(
                                 onPressed: () {
                                 
-                                    Navigator.pushReplacement(
+                                    Navigator.pushReplacementNamed(
                                       context,
-                                      MaterialPageRoute(
-                                          builder: (context) =>
-                                              CategoryScreen()),
+                                      "categoryscreen"
                                       // Form is valid, do something
                                     );
                                   },
