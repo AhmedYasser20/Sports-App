@@ -108,13 +108,19 @@ class _HomeScreenState extends State<HomeScreen> {
                       padding: const EdgeInsets.all(20.0),
                       child: InkWell(
                         onTap: () {
-                          
+                          Navigator.pushNamed(context, "TestRadwa");
                         },
                         child: Container(
                           color: Colors.amber,
                           height: 125,
                           width: 125,
-                          child: Text("Football")
+                          child: Column(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: [
+                             
+                              Text("Football"),
+                            ],
+                          )
                         ),
                       ),
                     ),
