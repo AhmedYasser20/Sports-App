@@ -2,10 +2,9 @@ import 'dart:async';
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-Future<Leaguesapis > fetchdata(  ) async {
-  //String countryId
+Future<Leaguesapis > fetchdata(  String countryId) async {
   final response = await http
-      .get(Uri.parse('https://apiv2.allsportsapi.com/football/?met=Leagues&APIkey=249335fc92ffe51aadfbfb9272ed465c1f6257cf4846092559c49fda01ba040b'));
+      .get(Uri.parse('https://apiv2.allsportsapi.com/football/?met=Leagues&APIkey=249335fc92ffe51aadfbfb9272ed465c1f6257cf4846092559c49fda01ba040b&countryId=$countryId'));
 
   if (response.statusCode == 200) {
   

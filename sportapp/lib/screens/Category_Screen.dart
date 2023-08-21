@@ -177,8 +177,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   ],
                 ),
                       // Additional content for the second container
-                   
-                
                 Column(
                   children: [
                     Container(

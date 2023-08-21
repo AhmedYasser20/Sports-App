@@ -19,19 +19,24 @@ class LeaguesGridTile extends StatelessWidget {
       );
     }
 
-    return GridTile(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Image.network(
-            leagueLogo,
-            width: 100,
-            height: 100,
-            fit: BoxFit.contain,
-          ),
-          SizedBox(height: 10),
-          Text(leagueName),
-        ],
+    return InkWell(
+      onTap: (){
+        Navigator.pushNamed(context, "Teams",arguments: leagues['league_key'].toString());
+      },
+      child: GridTile(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Image.network(
+              leagueLogo,
+              width: 100,
+              height: 100,
+              fit: BoxFit.contain,
+            ),
+            SizedBox(height: 10),
+            Text(leagueName),
+          ],
+        ),
       ),
     );
   }
