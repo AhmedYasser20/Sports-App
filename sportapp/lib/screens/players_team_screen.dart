@@ -1,8 +1,9 @@
-import 'dart:ffi';
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-import '../api/player_of_team.dart';
+import '../models/player_of_team.dart';
+import 'countries_screen.dart';
 
 class PlayersOfTeam extends StatefulWidget {
   const PlayersOfTeam({super.key});
@@ -13,66 +14,144 @@ class PlayersOfTeam extends StatefulWidget {
 
 class _PlayersOfTeamState extends State<PlayersOfTeam> {
   late Future<PlayersOfTeamApis> futuredata;
-   void initState() {
+  void initState() {
     // TODO: implement initState
     super.initState();
     futuredata = fetchdata('1');
   }
+
   @override
   Widget build(BuildContext context) {
-    var recvData=ModalRoute.of(context)?.settings.arguments as String ;
+    var recvData = ModalRoute.of(context)?.settings.arguments as String;
     setState(() {
       futuredata = fetchdata(recvData);
     });
     return Scaffold(
-      appBar: AppBar(backgroundColor: Colors.black,),
-      body: Container(
-        child: FutureBuilder<PlayersOfTeamApis>(future: futuredata, 
-           builder: (context, snapshot) {
+        backgroundColor: Colors.black,
+        appBar: AppBar(
+          leading: Builder(
+            builder: (BuildContext context) {
+              return IconButton(
+                icon: Icon(Icons.arrow_back),
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+              );
+            },
+          ),
+          title: Row(
+            children: [
+              Text(
+                " Playrs",
+                style: GoogleFonts.barriecito(
+                  color: Colors.amber,
+                  fontSize: 30,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+              SizedBox(
+                width: 5,
+              ),
+              Text(
+                "Of Team..",
+                style: GoogleFonts.barriecito(
+                  color: Colors.white,
+                  fontSize: 15,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ],
+          ),
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          flexibleSpace: Container(
+            decoration: BoxDecoration(
+              gradient: LinearGradient(
+                colors: [Colors.black38, Colors.amberAccent, Colors.black38],
+                begin: Alignment.topLeft,
+                end: Alignment.bottomRight,
+              ),
+            ),
+          ),
+        ),
+        
+        body: Container(
+          
+          color: Colors.black,
+          child: FutureBuilder<PlayersOfTeamApis>(
+            future: futuredata,
+            builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return CircularProgressIndicator(color: Color.fromARGB(255, 46, 2, 4));
+                return CircularProgressIndicator(
+                  color: Color.fromARGB(255, 46, 2, 4),
+                );
               } else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
               } else if (snapshot.hasData) {
-
-                final PlayerData = snapshot.data!.result;
-                return GridView.builder(
-                      shrinkWrap: true,
-                        gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 200,
-                            childAspectRatio: 3 / 2,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
-                            itemCount:8,
-                        itemBuilder: (BuildContext context, index) {
-                          return InkWell(
-                            onTap: (){
-                              Navigator.pushNamed(context, "playerInfo",arguments: PlayerData[index]);
-                            },
-                            child: Container(
-                              child: Column(
-                                children: [SizedBox(
-                                  height: 50,
-                                  width: 50,
-                                  
-                                  child: Image.network(PlayerData[index]["player_image"]!=null?PlayerData[index]["player_image"]:
-                                  "",errorBuilder: (context, error, stackTrace) {
-                                        return Text('Error loading image');
-                                   },)
-                                  ),
-                                  SizedBox(height: 5,),
-                                  Text(PlayerData[index]["player_name"])
-                                  ],
+                final playerData = snapshot.data!.result;
+                return Center(
+                  child: GridView.builder(
+                    shrinkWrap: true,
+                    gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                      maxCrossAxisExtent: 200,
+                      childAspectRatio: 3 / 2,
+                      crossAxisSpacing: 20,
+                      mainAxisSpacing: 20,
+                    ),
+                    itemCount: 8,
+                    itemBuilder: (BuildContext context, index) {
+                      final playerImage = playerData[index]['player_image'];
+                      final playerName = playerData[index]['player_name'];
+                     
+                
+                      return InkWell(
+                  onTap: () {
+                    Navigator.pushNamed(context, "playerInfo",
+                      arguments: playerData[index]);
+                  },
+                  child: Container(
+                    color: Colors.black,
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: 50,
+                          width: 50,
+                          child: playerImage != null
+                            ? CircleAvatar(
+                               backgroundColor: Colors.amber,
+                  backgroundImage: NetworkImage(playerImage),
+                  radius: 25,
+                              )
+                            : CircleAvatar(
+                              backgroundColor: Colors.amber,
+                  backgroundImage: AssetImage('assets/images/vin.png'),
+                  radius: 25,
                               ),
-                            ),
-                          );
-                        });
+                        ),
+                        SizedBox(height: 5),
+                        Text(
+                          playerName,
+                         style: GoogleFonts.barriecito(
+                  color: Colors.white,
+                  fontSize: 20,
+                  fontWeight: FontWeight.bold,
+                ),
+                        ),
+                        Divider(color: Colors.amber, thickness: 1.0),
+                      ],
+                  
+                            
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                );
               } else {
-                // Handle the case where data is not available
                 return Text('No data available.');
               }
-            },),
-      ),
-    );
+            },
+          ),
+        ));
   }
 }

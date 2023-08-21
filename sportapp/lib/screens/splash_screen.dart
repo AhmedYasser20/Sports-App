@@ -28,7 +28,7 @@ class SplashScreen extends StatelessWidget {
               opacity: 0.5,
               fit: BoxFit.none,
               //maybe need locol image
-                image: AssetImage("assets/imgs/wallpaper.jpg"))),
+                image: AssetImage("assets/images/wallpaper.jpg"))),
             ),
         )
     );

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:sportapp/screens/Category_Screen.dart';
-import 'package:sportapp/screens/HomeScreen/home_screen.dart';
-import 'package:sportapp/screens/Leagues_screen.dart';
-import 'package:sportapp/screens/leagueScreen/teams_home.dart';
-import 'package:sportapp/screens/onboardingScreens/test_page_view.dart';
-import 'package:sportapp/screens/player_info.dart';
-import 'package:sportapp/screens/players_team_screen.dart';
-import 'package:sportapp/screens/splash_screen.dart';
 
-import 'screens/HomeScreen/countries_screen.dart';
+
+import 'screens/Category_Screen.dart';
+import 'screens/Leagues_screen.dart';
+import 'screens/countries_screen.dart';
+import 'screens/onboardingScreens/test_page_view.dart';
+import 'screens/player_info.dart';
+import 'screens/players_team_screen.dart';
+import 'screens/splash_screen.dart';
+import 'screens/teams_screen.dart';
+
 
 void main() {
   runApp(const Myapp());

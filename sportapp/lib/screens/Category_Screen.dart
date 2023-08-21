@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../widgets/category_widget.dart';
+import 'countries_screen.dart';
 
 class CategoryScreen extends StatefulWidget {
   @override
@@ -308,7 +309,13 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   image: "assets/images/football.png",
                   name: "Football",
                   onTap: () {
-                    Navigator.pushNamed(context, "Countries");
+                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              test()),
+                                      // Form is valid, do something
+                                    );
                   },
                 ),
                 SportWidget(
