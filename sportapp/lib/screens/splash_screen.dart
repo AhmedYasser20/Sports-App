@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:toggle_switch/toggle_switch.dart';
+
+import '../gloabal_varibles.dart';
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
 
@@ -20,7 +23,22 @@ class SplashScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text("Sport App",style:  GoogleFonts.bebasNeue(color: Colors.white,fontSize: 40,fontWeight: FontWeight.bold),),
-                Text("Intixel training app",style: GoogleFonts.quicksand(color: Colors.white),)
+                Text("Intixel training app",style: GoogleFonts.quicksand(color: Colors.white),),
+                SizedBox(height: 50,),
+                // Here, default theme colors are used for activeBgColor, activeFgColor, inactiveBgColor and inactiveFgColor
+                ToggleSwitch(
+                  initialLabelIndex: 0,
+                  totalSwitches: 2,
+                  labels: ['America', 'عربي'],
+                  onToggle: (index) {
+                      if(index==0){
+                        indexLanguage=0;
+                      }
+                      else{
+                        indexLanguage=1;
+                      }
+                  },
+                ),
               ],
             ),
             decoration: BoxDecoration(

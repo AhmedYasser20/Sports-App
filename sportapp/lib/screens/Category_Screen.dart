@@ -1,6 +1,8 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sportapp/animtion/anime.dart';
+import 'package:sportapp/l10n/locale_keys.g.dart';
 import 'package:toggle_switch/toggle_switch.dart';
 
 import '../widgets/category_widget.dart';
@@ -92,7 +94,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            "Choose",
+                                            LocaleKeys.choose.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.amber,
                                               fontSize: 50,
@@ -100,7 +102,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                             ),
                                           ),
                                           Text(
-                                            "Your Sport",
+                                            LocaleKeys.yourSport.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.white,
                                               fontSize: 50,
@@ -152,7 +154,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            "Choose",
+                                            LocaleKeys.choose.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.amber,
                                               fontSize: 50,
@@ -160,7 +162,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                             ),
                                           ),
                                           Text(
-                                            "Your Sport",
+                                            LocaleKeys.yourCountry.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.white,
                                               fontSize: 50,
@@ -214,7 +216,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            "Choose",
+                                            LocaleKeys.choose.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.amber,
                                               fontSize: 50,
@@ -222,7 +224,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                             ),
                                           ),
                                           Text(
-                                            "Your Sport",
+                                            LocaleKeys.yourCountry.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.white,
                                               fontSize: 50,
@@ -274,7 +276,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                             CrossAxisAlignment.start,
                                         children: [
                                           Text(
-                                            "Choose",
+                                            LocaleKeys.choose.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.amber,
                                               fontSize: 50,
@@ -282,7 +284,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                             ),
                                           ),
                                           Text(
-                                            "Your Sport",
+                                            LocaleKeys.yourCountry.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.white,
                                               fontSize: 50,
@@ -309,7 +311,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               children: [
                 SportWidget(
                   image: "assets/images/football.png",
-                  name: "Football",
+                  name: LocaleKeys.footballTitle,
                   onTap: () {
                     Navigator.pushReplacement(
                                       context,
@@ -322,7 +324,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 ),
                 SportWidget(
                   image: "assets/images/bascketball.png",
-                  name: "Basketball",
+                  name: LocaleKeys.basketballTitle.tr(),
                   onTap: () {
                     showDialog(
                       context: context,
@@ -348,14 +350,14 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 ),
                 SportWidget(
                   image: "assets/images/cricket.png",
-                  name: "Cricket",
+                  name: LocaleKeys.cricket,
                   onTap: () {
                     showDialog(
                       context: context,
                       builder: (BuildContext context) {
                         return AlertDialog(
                           title: Text("Coming soon"),
-                          content: Text("Tennis is coming soon.",
+                          content: Text("cricket is coming soon.",
                               style: GoogleFonts.barriecito()),
                           actions: [
                             TextButton(
@@ -374,7 +376,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 ),
                 SportWidget(
                   image: "assets/images/tennis.png",
-                  name: "Tennis",
+                  name: LocaleKeys.tennisTitle,
                   onTap: () {
                     showDialog(
                       context: context,

@@ -1,5 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sportapp/gloabal_varibles.dart';
+
+import '../l10n/locale_keys.g.dart';
 
 class OnboardOnne extends StatelessWidget {
   const OnboardOnne({super.key});
@@ -32,9 +36,9 @@ class OnboardOnne extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 20,),
-                      Text("Football",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      Text(LocaleKeys.footballTitle.tr(),style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
                       SizedBox(height: 10,),
-                      Text("a team sport where players kick a ball into the opposing team's goal to score points, with the aim of having the highest number of goals by the end of the match to win.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                      Text(LocaleKeys.footballSubTitle.tr(),style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
                     ],
               ),
             ),
@@ -77,9 +81,9 @@ class OnBoardTwo extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 20,),
-                      Text("Basketball",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      Text(LocaleKeys.basketballTitle.tr(),style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
                       SizedBox(height: 10,),
-                      Text("fast-paced team sport played with a spherical ball, where players try to score points by shooting the ball into the opponent's hoop while defending their own.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                      Text(LocaleKeys.basketballsubtile.tr(),style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
                     ],
               ),
             ),
@@ -121,9 +125,9 @@ class OnBoardThree extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       SizedBox(height: 20,),
-                      Text("Tennis",style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
+                      Text(LocaleKeys.tennisTitle.tr(),style: TextStyle(color: Colors.white,fontSize: 25,fontWeight: FontWeight.w600),),
                       SizedBox(height: 10,),
-                      Text("racket sport played between two players or teams, involving hitting a ball over a net using rackets, with the objective of winning points by making the ball land in the opponent's court in a way they cannot return it successfully.",style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
+                      Text(LocaleKeys.tennisSubtitle.tr(),style: TextStyle(color: Colors.white,fontSize: 15,fontWeight: FontWeight.w100),),
                     ],
               ),
             ),

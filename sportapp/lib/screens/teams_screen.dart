@@ -2,6 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:sportapp/l10n/locale_keys.g.dart';
 
 import '../models/teams_api.dart';
 import '../models/top_scorers.dart';
@@ -55,7 +56,7 @@ class _TeamsScreensState extends State<TeamsScreens> {
             ),
           ),
           title: Text(
-            "Teams",
+            LocaleKeys.leagues,
             style: GoogleFonts.barriecito(
               color: Colors.white,
               fontSize: 30,
@@ -78,9 +79,9 @@ class _TeamsScreensState extends State<TeamsScreens> {
               child: TabBar(
                 tabs: [
                   Tab(
-                    text: "Teams",
+                    text: LocaleKeys.teams,
                   ),
-                  Tab(text: "Top Scores"),
+                  Tab(text: LocaleKeys.topScores),
                 ],
                 indicatorColor: Colors.white,
                 labelColor: Colors.white,
@@ -117,7 +118,7 @@ class _TeamsScreensState extends State<TeamsScreens> {
                 color: Color.fromARGB(255, 253, 162, 4)
               ),
     decoration: InputDecoration(
-      hintText: 'Search Bar',
+      hintText: LocaleKeys.searchBar,
       hintStyle: TextStyle(
         color: Color.fromARGB(255, 253, 162, 4),
         fontSize: 13,

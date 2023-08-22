@@ -43,7 +43,7 @@ class _PlayersOfTeamState extends State<PlayersOfTeam> {
           title: Row(
             children: [
               Text(
-                " Playrs",
+                "Players",
                 style: GoogleFonts.barriecito(
                   color: Colors.amber,
                   fontSize: 30,

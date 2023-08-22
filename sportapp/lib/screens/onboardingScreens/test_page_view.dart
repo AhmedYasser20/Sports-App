@@ -1,6 +1,9 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:sportapp/gloabal_varibles.dart';
 
 
+import '../../l10n/locale_keys.g.dart';
 import '../../widgets/onboarding_widgets.dart';
 import '../Category_Screen.dart';
 
@@ -71,7 +74,7 @@ class _testOnBoardScreenMainState extends State<testOnBoardScreenMain> {
                                   minimumSize: Size(100, 25),
                                 ),
                                 child: Text(
-                                  "Skip",
+                                  LocaleKeys.skip.tr(),
                                   style: TextStyle(
                                     color: Colors.white,
                                     fontWeight: FontWeight.bold,

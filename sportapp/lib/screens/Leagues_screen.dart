@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
+import 'package:sportapp/l10n/locale_keys.g.dart';
 
 
 import '../models/Leagues_apis.dart';
@@ -43,7 +44,7 @@ class _Leagues_screenState extends State<Leagues_screen> {
         title: Row(
           children: [
             Text(
-              " leagues",
+              LocaleKeys.leagues,
               style: GoogleFonts.barriecito(
                 color: Colors.amber,
                 fontSize: 30,
@@ -54,7 +55,7 @@ class _Leagues_screenState extends State<Leagues_screen> {
               width: 5,
             ),
             Text(
-              "Of Country..",
+              LocaleKeys.ofCountry,
               style: GoogleFonts.barriecito(
                 color: Colors.white,
                 fontSize: 15,
