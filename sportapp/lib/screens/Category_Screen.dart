@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:sportapp/animtion/anime.dart';
 
 import '../widgets/category_widget.dart';
 import 'countries_screen.dart';
@@ -313,7 +314,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                       context,
                                       MaterialPageRoute(
                                           builder: (context) =>
-                                              test()),
+                                             FootballAnimation()),
                                       // Form is valid, do something
                                     );
                   },
