@@ -1,6 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 
 import '../models/player_of_team.dart';
 import 'countries_screen.dart';
@@ -82,9 +83,7 @@ class _PlayersOfTeamState extends State<PlayersOfTeam> {
             future: futuredata,
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
-                return CircularProgressIndicator(
-                  color: Color.fromARGB(255, 46, 2, 4),
-                );
+                return Lottie.asset('assets/imgs/waiting2.json',repeat: true,height: 100,width: 100,);
               } else if (snapshot.hasError) {
                 return Text('${snapshot.error}');
               } else if (snapshot.hasData) {

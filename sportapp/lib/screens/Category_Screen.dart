@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sportapp/animtion/anime.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 import '../widgets/category_widget.dart';
 import 'countries_screen.dart';
@@ -46,6 +47,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        
         backgroundColor: Colors.black,
         body: Column(children: [
           Expanded(
@@ -301,7 +303,6 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   ],
                 ),
         ])),
-        
           Expanded(
             child: GridView.count(
               crossAxisCount: 2,

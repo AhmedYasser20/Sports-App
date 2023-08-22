@@ -11,7 +11,7 @@ class FootballAnimation extends StatefulWidget {
 class _FootballAnimationState extends State<FootballAnimation> {
   @override
   Widget build(BuildContext context) {
-     Future.delayed(Duration(seconds: 10)
+     Future.delayed(Duration(seconds: 5)
    ,(){
     Navigator.pushReplacementNamed(context, "Countries");
    }

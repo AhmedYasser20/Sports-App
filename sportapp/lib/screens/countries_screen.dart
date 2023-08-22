@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
 
 import '../models/countries_apis.dart';
 import '../widgets/countries_widgets.dart';
@@ -81,7 +82,7 @@ class _testState extends State<test> {
           future: futuredata,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return CircularProgressIndicator(color: Color(0xffff3a44));
+              return Lottie.asset('assets/imgs/waiting2.json',repeat: true,height: 100,width: 100,);
             } else if (snapshot.hasError) {
               return Text('${snapshot.error}');
             } else if (snapshot.hasData) {
