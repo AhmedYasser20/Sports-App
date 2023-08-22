@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
+import 'package:sportapp/l10n/locale_keys.g.dart';
 
 import '../models/countries_apis.dart';
 import '../widgets/countries_widgets.dart';
@@ -46,7 +48,7 @@ class _testState extends State<test> {
       title: Row(children: [
      
          Text(
-                                            "Choose",
+                                            LocaleKeys.choose,
                                             style: GoogleFonts.barriecito(
                                               color: Colors.amber,
                                               fontSize: 30,
@@ -55,7 +57,7 @@ class _testState extends State<test> {
                                           ),
                                           SizedBox(width: 5,),
                                           Text(
-                                            "Your Country..",
+                                            LocaleKeys.yourCountry,
                                             style: GoogleFonts.barriecito(
                                               color: Colors.white,
                                               fontSize: 15,
@@ -81,7 +83,7 @@ class _testState extends State<test> {
           future: futuredata,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return CircularProgressIndicator(color: Color(0xffff3a44));
+              return Lottie.asset('assets/imgs/waiting2.json',repeat: true,height: 100,width: 100,);
             } else if (snapshot.hasError) {
               return Text('${snapshot.error}');
             } else if (snapshot.hasData) {

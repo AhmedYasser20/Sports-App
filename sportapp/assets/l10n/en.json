@@ -1,0 +1,20 @@
+{
+  "skip":"Skip",
+  "footballTitle":"Football",
+  "footballSubTitle":"a team sport where players kick a ball into the opposing team's goal to score points, with the aim of having the highest number of goals by the end of the match to win.",
+  "basketballTitle":"Basket Ball",
+  "basketballsubtile":"fast-paced team sport played with a spherical ball, where players try to score points by shooting the ball into the opponent's hoop while defending their own.",
+  "tennisTitle":"Tennis",
+  "tennisSubtitle":"racket sport played between two players or teams, involving hitting a ball over a net using rackets, with the objective of winning points by making the ball land in the opponent's court in a way they cannot return it successfully.",
+  "Choose":"Choose",
+  "yourSport":"Your Sport",
+  "cricket":"Cricket",
+  "yourCountry":"Your Country",
+  "leagues":"Leagues",
+  "ofCountry":"Of Country",
+  "teams":"Teams",
+  "TopScores":"Top Scores",
+  "Search Bar":"Search Bar",
+  "Players":"Players",
+  "ofTeam":"Of Team"
+ }

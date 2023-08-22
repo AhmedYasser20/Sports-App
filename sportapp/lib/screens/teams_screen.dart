@@ -1,6 +1,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
+import 'package:sportapp/l10n/locale_keys.g.dart';
 
 import '../models/teams_api.dart';
 import '../models/top_scorers.dart';
@@ -54,7 +56,7 @@ class _TeamsScreensState extends State<TeamsScreens> {
             ),
           ),
           title: Text(
-            "Teams",
+            LocaleKeys.leagues,
             style: GoogleFonts.barriecito(
               color: Colors.white,
               fontSize: 30,
@@ -77,9 +79,9 @@ class _TeamsScreensState extends State<TeamsScreens> {
               child: TabBar(
                 tabs: [
                   Tab(
-                    text: "Teams",
+                    text: LocaleKeys.teams,
                   ),
-                  Tab(text: "Top Scores"),
+                  Tab(text: LocaleKeys.topScores),
                 ],
                 indicatorColor: Colors.white,
                 labelColor: Colors.white,
@@ -116,7 +118,7 @@ class _TeamsScreensState extends State<TeamsScreens> {
                 color: Color.fromARGB(255, 253, 162, 4)
               ),
     decoration: InputDecoration(
-      hintText: 'Search Bar',
+      hintText: LocaleKeys.searchBar,
       hintStyle: TextStyle(
         color: Color.fromARGB(255, 253, 162, 4),
         fontSize: 13,
@@ -137,9 +139,7 @@ class _TeamsScreensState extends State<TeamsScreens> {
                     future: futuredata,
                     builder: (context, snapshot) {
                       if (snapshot.connectionState == ConnectionState.waiting) {
-                        return CircularProgressIndicator(
-                          color: Color.fromARGB(255, 46, 2, 4),
-                        );
+                        return Lottie.asset('assets/imgs/waiting2.json',repeat: true,height: 100,width: 100,);
                       } else if (snapshot.hasError) {
                         return Text('${snapshot.error}');
                       } else if (snapshot.hasData) {

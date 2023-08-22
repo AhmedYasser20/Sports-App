@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:lottie/lottie.dart';
+import 'package:sportapp/l10n/locale_keys.g.dart';
 
 
 import '../models/Leagues_apis.dart';
@@ -42,7 +44,7 @@ class _Leagues_screenState extends State<Leagues_screen> {
         title: Row(
           children: [
             Text(
-              " leagues",
+              LocaleKeys.leagues,
               style: GoogleFonts.barriecito(
                 color: Colors.amber,
                 fontSize: 30,
@@ -53,7 +55,7 @@ class _Leagues_screenState extends State<Leagues_screen> {
               width: 5,
             ),
             Text(
-              "Of Country..",
+              LocaleKeys.ofCountry,
               style: GoogleFonts.barriecito(
                 color: Colors.white,
                 fontSize: 15,
@@ -80,9 +82,7 @@ class _Leagues_screenState extends State<Leagues_screen> {
           future: futuredata,
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return CircularProgressIndicator(
-                color: Color.fromARGB(255, 46, 2, 4),
-              );
+              return Lottie.asset('assets/imgs/waiting2.json',repeat: true,height: 100,width: 100,);
             } else if (snapshot.hasError) {
               return Text('${snapshot.error}');
             } else if (snapshot.hasData) {
