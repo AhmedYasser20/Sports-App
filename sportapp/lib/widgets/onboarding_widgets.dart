@@ -15,7 +15,7 @@ class OnboardOnne extends StatelessWidget {
             decoration: BoxDecoration(          
                 image: DecorationImage(
                     image:
-                        AssetImage('assets/imgs/messi.png'))),
+                        AssetImage('assets/images/messi.png'))),
           width: MediaQuery.of(context).size.width ,
           height: MediaQuery.of(context).size.height*0.60*0.9,
           ),
@@ -60,7 +60,7 @@ class OnBoardTwo extends StatelessWidget {
             decoration: BoxDecoration(          
                 image: DecorationImage(
                     image:
-                        AssetImage('assets/imgs/basketPLayer2.png'))),
+                        AssetImage('assets/images/basketPlayer2.png'))),
           width: MediaQuery.of(context).size.width ,
           height: MediaQuery.of(context).size.height*0.60*0.9,
           ),
@@ -104,7 +104,7 @@ class OnBoardThree extends StatelessWidget {
             decoration: BoxDecoration(          
                 image: DecorationImage(
                     image:
-                        AssetImage('assets/imgs/tennisPLayer2.png'))),
+                        AssetImage('assets/images/tennisPlayer2.png'))),
           width: MediaQuery.of(context).size.width ,
           height: MediaQuery.of(context).size.height*0.60*0.9,
           ),

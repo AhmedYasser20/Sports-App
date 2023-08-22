@@ -1,5 +1,9 @@
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:sportapp/widgets/onboarding_widgets.dart';
+
+import '../../widgets/onboarding_widgets.dart';
+import '../Category_Screen.dart';
+
 
 class OnBoardScreenMain extends StatelessWidget {
   const OnBoardScreenMain({super.key});
@@ -7,7 +11,7 @@ class OnBoardScreenMain extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: const Color.fromARGB(255, 3, 5, 17),
+        backgroundColor: Colors.black,
         body: SizedBox.expand(
           child: Container(
             child:
@@ -15,13 +19,35 @@ class OnBoardScreenMain extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      InkWell(
-                        onTap: (){
-                          Navigator.pushReplacementNamed(context, "HomeScreen");
-                        },
-                        child: Text("Ski2p"),
-                      )
-                    ]),
+                   ElevatedButton(
+                                onPressed: () {
+                                
+                                    Navigator.pushReplacement(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              CategoryScreen()),
+                                      // Form is valid, do something
+                                    );
+                                  },
+                                
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.amber,
+                                  shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(50),
+                                  ),
+                                  minimumSize: Size(100, 25),
+                                ),
+                                child: Text(
+                                  "Skip",
+                                  style: TextStyle(
+                                    color: Colors.white,
+                                    fontWeight: FontWeight.bold,
+                                  ),
+                                ),
+                              ),
+                            
+        ]),
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -33,6 +59,7 @@ class OnBoardScreenMain extends StatelessWidget {
                   ],
                 ),
               ),
+             
             ]),
             decoration: BoxDecoration(
                 image: DecorationImage(

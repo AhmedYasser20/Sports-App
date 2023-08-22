@@ -209,7 +209,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           );
                         },
                       );
-                         },   
+                        },
                         child: Container(
                           color: Colors.amber,
                           height: 125,
