@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
@@ -48,7 +49,7 @@ class _testState extends State<test> {
       title: Row(children: [
      
          Text(
-                                            LocaleKeys.choose,
+                                            LocaleKeys.choose.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.amber,
                                               fontSize: 30,
@@ -57,7 +58,7 @@ class _testState extends State<test> {
                                           ),
                                           SizedBox(width: 5,),
                                           Text(
-                                            LocaleKeys.yourCountry,
+                                            LocaleKeys.yourCountry.tr(),
                                             style: GoogleFonts.barriecito(
                                               color: Colors.white,
                                               fontSize: 15,

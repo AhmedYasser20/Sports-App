@@ -50,9 +50,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
         
-        backgroundColor: Colors.black,
+        backgroundColor: Color.fromARGB(255, 0, 0, 0),
         body: Column(children: [
-          Expanded(
+          Container(
+            margin: EdgeInsets.only(bottom: 25),
+            height: MediaQuery.of(context).size.height * 0.35,
             child: PageView(
               controller: _pageController,
               onPageChanged: (index) {
@@ -66,9 +68,9 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.5 * 1,
+                      height: MediaQuery.of(context).size.height * 0.35,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
+                        borderRadius: BorderRadius.circular(10),
                         color: Colors.black,
                         image: DecorationImage(
                           image: AssetImage("assets/images/stadium.jpeg"),
@@ -95,7 +97,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                         children: [
                                           Text(
                                             LocaleKeys.choose.tr(),
-                                            style: GoogleFonts.barriecito(
+                                            style: GoogleFonts.bebasNeue(
                                               color: Colors.amber,
                                               fontSize: 50,
                                               fontWeight: FontWeight.bold,
@@ -103,10 +105,10 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                           ),
                                           Text(
                                             LocaleKeys.yourSport.tr(),
-                                            style: GoogleFonts.barriecito(
+                                            style: GoogleFonts.bebasNeue(
                                               color: Colors.white,
                                               fontSize: 50,
-                                              fontWeight: FontWeight.bold,
+                                              fontWeight: FontWeight.w400,
                                             ),
                                           ),
                                         ],
@@ -126,10 +128,10 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.5 * 1,
+                      height: MediaQuery.of(context).size.height *  0.35,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.black,
+                        borderRadius: BorderRadius.circular(10),
+                        color:  Colors.black,
                         image: DecorationImage(
                           image: AssetImage("assets/images/tennis stad.jpg"),
                           opacity: 0.5,
@@ -155,7 +157,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                         children: [
                                           Text(
                                             LocaleKeys.choose.tr(),
-                                            style: GoogleFonts.barriecito(
+                                            style: GoogleFonts.bebasNeue(
                                               color: Colors.amber,
                                               fontSize: 50,
                                               fontWeight: FontWeight.bold,
@@ -163,10 +165,10 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                           ),
                                           Text(
                                             LocaleKeys.yourCountry.tr(),
-                                            style: GoogleFonts.barriecito(
+                                            style: GoogleFonts.bebasNeue(
                                               color: Colors.white,
                                               fontSize: 50,
-                                              fontWeight: FontWeight.bold,
+                                              fontWeight: FontWeight.w400,
                                             ),
                                           ),
                                         ],
@@ -187,9 +189,9 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.5 * 1,
+                      height: MediaQuery.of(context).size.height *  0.35,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(10),
+                       borderRadius: BorderRadius.circular(10),
                         color: Colors.black,
                         image: DecorationImage(
                           image:
@@ -217,18 +219,18 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                         children: [
                                           Text(
                                             LocaleKeys.choose.tr(),
-                                            style: GoogleFonts.barriecito(
+                                            style: GoogleFonts.bebasNeue(
                                               color: Colors.amber,
                                               fontSize: 50,
                                               fontWeight: FontWeight.bold,
                                             ),
                                           ),
                                           Text(
-                                            LocaleKeys.yourCountry.tr(),
-                                            style: GoogleFonts.barriecito(
+                                            LocaleKeys.teams.tr(),
+                                            style: GoogleFonts.bebasNeue(
                                               color: Colors.white,
                                               fontSize: 50,
-                                              fontWeight: FontWeight.bold,
+                                              fontWeight: FontWeight.w400,
                                             ),
                                           ),
                                         ],
@@ -248,9 +250,9 @@ class _CategoryScreenState extends State<CategoryScreen> {
                   children: [
                     Container(
                       width: MediaQuery.of(context).size.width,
-                      height: MediaQuery.of(context).size.height * 0.5 * 1,
+                      height: MediaQuery.of(context).size.height * 0.35,
                       decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
+                       borderRadius: BorderRadius.circular(10),
                         color: Colors.black,
                         image: DecorationImage(
                           image: AssetImage("assets/images/cricket std.jpg"),
@@ -277,7 +279,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                         children: [
                                           Text(
                                             LocaleKeys.choose.tr(),
-                                            style: GoogleFonts.barriecito(
+                                            style: GoogleFonts.bebasNeue(
                                               color: Colors.amber,
                                               fontSize: 50,
                                               fontWeight: FontWeight.bold,
@@ -285,10 +287,10 @@ class _CategoryScreenState extends State<CategoryScreen> {
                                           ),
                                           Text(
                                             LocaleKeys.yourCountry.tr(),
-                                            style: GoogleFonts.barriecito(
+                                            style: GoogleFonts.bebasNeue(
                                               color: Colors.white,
                                               fontSize: 50,
-                                              fontWeight: FontWeight.bold,
+                                              fontWeight: FontWeight.w100,
                                            ),
                                           ),
                                         ],
@@ -311,7 +313,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
               children: [
                 SportWidget(
                   image: "assets/images/football.png",
-                  name: LocaleKeys.footballTitle,
+                  name: LocaleKeys.footballTitle.tr(),
                   onTap: () {
                     Navigator.pushReplacement(
                                       context,
@@ -332,11 +334,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
                         return AlertDialog(
                           title: Text("Coming soon"),
                           content: Text("Tennis is coming soon.",
-                              style: GoogleFonts.barriecito()),
+                              style: GoogleFonts.bebasNeue()),
                           actions: [
                             TextButton(
                               child: Text("OK",
-                                  style: GoogleFonts.barriecito(
+                                  style: GoogleFonts.bebasNeue(
                                       color: Colors.amber)),
                               onPressed: () {
                                 Navigator.of(context).pop();
@@ -350,7 +352,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 ),
                 SportWidget(
                   image: "assets/images/cricket.png",
-                  name: LocaleKeys.cricket,
+                  name: LocaleKeys.cricket.tr(),
                   onTap: () {
                     showDialog(
                       context: context,
@@ -358,11 +360,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
                         return AlertDialog(
                           title: Text("Coming soon"),
                           content: Text("cricket is coming soon.",
-                              style: GoogleFonts.barriecito()),
+                              style: GoogleFonts.bebasNeue()),
                           actions: [
                             TextButton(
                               child: Text("OK",
-                                  style: GoogleFonts.barriecito(
+                                  style: GoogleFonts.bebasNeue(
                                       color: Colors.amber)),
                               onPressed: () {
                                 Navigator.of(context).pop();
@@ -376,7 +378,7 @@ class _CategoryScreenState extends State<CategoryScreen> {
                 ),
                 SportWidget(
                   image: "assets/images/tennis.png",
-                  name: LocaleKeys.tennisTitle,
+                  name: LocaleKeys.tennisTitle.tr(),
                   onTap: () {
                     showDialog(
                       context: context,
@@ -384,11 +386,11 @@ class _CategoryScreenState extends State<CategoryScreen> {
                         return AlertDialog(
                           title: Text("Coming soon"),
                           content: Text("Tennis is coming soon.",
-                              style: GoogleFonts.barriecito()),
+                              style: GoogleFonts.bebasNeue()),
                           actions: [
                             TextButton(
                               child: Text("OK",
-                                  style: GoogleFonts.barriecito(
+                                  style: GoogleFonts.bebasNeue(
                                       color: Colors.amber)),
                               onPressed: () {
                                 Navigator.of(context).pop();

@@ -26,19 +26,7 @@ class SplashScreen extends StatelessWidget {
                 Text("Intixel training app",style: GoogleFonts.quicksand(color: Colors.white),),
                 SizedBox(height: 50,),
                 // Here, default theme colors are used for activeBgColor, activeFgColor, inactiveBgColor and inactiveFgColor
-                ToggleSwitch(
-                  initialLabelIndex: 0,
-                  totalSwitches: 2,
-                  labels: ['America', 'عربي'],
-                  onToggle: (index) {
-                      if(index==0){
-                        indexLanguage=0;
-                      }
-                      else{
-                        indexLanguage=1;
-                      }
-                  },
-                ),
+                
               ],
             ),
             decoration: BoxDecoration(
