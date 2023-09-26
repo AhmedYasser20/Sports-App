@@ -110,8 +110,11 @@ The Sports App is a comprehensive mobile application developed to provide users 
 3. Handle cases where API data may contain "null" by replacing it with an empty string ("").
 
 ## Demo Video
+https://github.com/AhmedYasser20/Sports-App/assets/93765400/eca2695e-afab-464e-8b0f-fc4c72ac19bb
+---
+https://github.com/AhmedYasser20/Sports-App/assets/93765400/1b1cc873-6b6e-440e-bd82-1e5229378b91
 
-https://github.com/AhmedYasser20/Sports-App/assets/93765400/c95b316f-22f6-4878-9a94-38325dd9642c
+
 
 
 
